@@ -1,0 +1,122 @@
+:root {
+    --color-background: #141414;
+    --color-text-primary: #FFFFFF;
+    --color-text-title: #E50914;
+    --color-text-main: #AAA;
+    --color-background-button: #FFFFFF;
+    --color-text-button: #141414;
+}
+/* resetando alguns estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+/* elementos base */
+body {
+    
+    background: var(--color-background);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text-primary);
+}
+header .container {
+
+    display: flex;
+    flex-direction: row; /* coloca o menu ao lado da logo */
+    align-items: center; /* alinhando o menu ao centro do container */
+    justify-content: space-between; /* adicionando um espaço entre o menu e a logo */    
+}
+header .logo {
+    color: var(--color-text-title);
+    font-family: Arial Black, 'Times New Roman', Times;
+    font-size: 40px;
+    max-width: 168px; /* tamanho da logo na tela */
+    margin-left: 5px; /* espaçamento entre o lado esquerdo da tela e a logo */
+}
+header nav a {
+    text-decoration: none; /* removendo o sublinhado do link dos menus */
+    margin-right: 10px; /* espaçamento entre o menu e o lado direito da tela e ente eles */
+    color: var(--color-text-main);
+}
+header nav a:hover {
+    color: var(--color-text-primary);
+}
+/* elementos do filme principal */
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)100%), url('/img/sherlock.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.filme-principal .container {
+    width: 70%;
+}
+.botao {
+    background-color: rgba(0,0,0,0.50);
+    border: none;
+    color: var(--color-text-primary);
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+.botao:hover {
+    background-color: var(--color-background-button);
+    color: var(--color-text-button);
+}
+.botao i {
+    margin-right: 8px;
+}
+.container {
+    margin-left: 20px;
+}
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.carrosel-filmes {
+    margin-top: 5px;
+}
+/* início da estilização do footer */
+.baseboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;    
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.baseboard a {
+    color: var(--color-text-primary);
+}
+/* fim da estilização do footer */
+
+/* responsivo */
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .button {
+        margin-top: 5px;
+        width: 300px;
+    }
+}
